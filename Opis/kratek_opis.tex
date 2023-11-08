@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[shortlabels]{enumitem}
+\usepackage{graphicx}
+
+\newtheorem{definition}{Definicija}
+
+\pagestyle{plain}
+
+\begin{document}
+\author{Domen Humar in Maja Komic}
+\date{Noveber 2023}
+\title{Domination on modular product graphs  A}
+\maketitle
+
+\section{Problem}
+Naj bosta $G$ in $H$ grafa. Na različnih primerih grafov želimo preveriti 
+spodnjo neenakost in poiskati čim več takih grafov $G$ in $H$ za katera velja ta neenakost 
+\begin{equation}
+    \gamma(G\diamond H) \leq \gamma (G) + \gamma (H) - 1
+\end{equation}
+
+\section{Definicije}
+
+    \begin{definition}
+        \textbf {Modularni produkt grafov $G$ in $H$} je graf $G\diamond H$ z množico vozlišč $V( G\diamond H) = V(G) \times  V(H)$, ki je 
+        unija kartezičega produkta, neposrednega produkta in neposrednega produkta komplementov G in H
+        $$G \diamond H = G\square H \cup G \times H \cup \overline{G} \times \overline{H} $$.
+        Natančneje, točki $(g, h)$ in $(g', h')$ iz grafa $G \diamond H$ sta sosednji, če velja: 
+        \begin{enumerate}
+            \item če je $g = g'$ in $hh' \in E(H)$; ali 
+            \item če je $h = h'$ in $gg' \in E(G)$; ali 
+            \item če je $gg' \in E(G)$ in $hh' \in E(H)$; ali
+            \item če za $g \neq g'$ in $h \neq h'$ velja $(u, u’) \notin  E(G)$ in $(v, v’) \notin  E(H)$. 
+        \end{enumerate}
+    \end{definition}
+
+    \begin{definition}
+        Množica $S\subseteq V(G)$ je \textbf {dominirana množica grafa $G = (V,E)$}, če za vsak $u \in V \backslash S$ obstaja $v \in S$, da je $uv i\in E(G)$. 
+    \end{definition}
+
+    \begin{definition}
+        \textbf {Dominirano število grafa $G = (V, E)$} je moč najmanjše dominirane množice grafa $G$, označimo ga z $\gamma (G)$.
+    \end{definition}
+
+\section{Načrt dela}
+Najprej bova implementirala sledeči funciji:
+    \begin{itemize}
+        \item funcijo, ki sprejme grafa $G$ in $H$ (podana z matriko sosednosti) in vrne podularni produkt $G \diamond H$, ter
+        \item funcijo, ki sprejme graf $G \diamond H$ (podan z matriko sosednosti) in vrne najmanjšo dominirano množico grafa in vrne moč te množice.
+    \end{itemize}
+
+Nato bova s simulacijo opazovala za katere grafe neenakost (1) velja, ko grafoma $G$ in $H$ postopoma dodajamo ogljišča in povezava. Začela bova 
+s preprostima grafoma z dvema ogljiščema in eno povezavo, ter jima sistematično dodajala ogljišča.
+
+Pri reševanju problema bova uporabljala Python.
+\end{document}
