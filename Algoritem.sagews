@@ -34,7 +34,6 @@ def preveri_neenakost(x, y, z):
 def preveri_enakost(x, y, z):
     return x == y + z - 1
 
-
 def naredi_matriko(n, m):
     matrika = [["V(H)", "E(H)", "γ(H)", "V(G)", "E(G)", "γ(G)", "γ(G ◇ H)", "neenakost", "enakost"]]
     matrika_enakosti = [["V(H)", "E(H)", "γ(H)", "V(G)", "E(G)", "γ(G)", "γ(G ◇ H)"]]
