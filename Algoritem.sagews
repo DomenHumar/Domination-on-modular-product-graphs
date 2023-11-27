@@ -1,18 +1,23 @@
-︠c5c73b1e-b110-4e5c-a532-460fe7f8dcc0s︠
+# Definiramo modularni produkt kot unijo kartezičnega produkta, direktnega produkta in direktnega produkta komplementov dveh grafov
+
 def modularni_produkt(G, H):
     A = H.cartesian_product(G)
-    B = H.tensor_product(G)
+    B = H.tensor_product(G) # tensor_product je direktni produkt po slovensko
     C = H.complement().tensor_product(G.complement())
     X = A.union(B)
     Y = X.union(C)
     return Y
 
-G = Graph([(0, 1), (0, 2), (1, 3), (2, 3)])
+# Primer za modularni produkt
+
+G = Graph([(0, 1), (0, 2), (2, 3), (1, 3)])
 H = Graph([(0, 1), (0, 2)])
 I = modularni_produkt(G, H)
 G.show()
 H.show()
 I.show()
+
+# Iskanje dominacijskega števila (kopiran iz https://www.steinertriples.ch/ncohen/tut/LP_examples/)
 
 def dominacijsko_stevilo (G):
     p = MixedIntegerLinearProgram(maximization = False)
@@ -23,10 +28,14 @@ def dominacijsko_stevilo (G):
     a = p.solve()
     return a
 
+# Primer za iskanje dominacijskega števila
+
 g = dominacijsko_stevilo(G)
 h = dominacijsko_stevilo(H)
 i = dominacijsko_stevilo(I)
 print(g, h, i)
+
+# Neenakost iz naloge
 
 def preveri_neenakost(x, y, z):
     return x <= y + z - 1
@@ -34,9 +43,11 @@ def preveri_neenakost(x, y, z):
 def preveri_enakost(x, y, z):
     return x == y + z - 1
 
+# Funkcija, ki nam poda podatke o grafih, ki imajo do n vozlišč in podatke o njihovih modularnih produktov z grafi, ki imajo do m vozlišč
+# Funkcija še preveri, kdaj velja neenakost iz naloge in kdaj v njej nastopi enakost
+
 def naredi_matriko(n, m):
     matrika = [["V(H)", "E(H)", "γ(H)", "V(G)", "E(G)", "γ(G)", "γ(G ◇ H)", "neenakost", "enakost"]]
-    matrika_enakosti = [["V(H)", "E(H)", "γ(H)", "V(G)", "E(G)", "γ(G)", "γ(G ◇ H)"]]
     for k in range(2, n):
         for H in graphs(k):
             for d in range(2, m):
@@ -50,9 +61,74 @@ def naredi_matriko(n, m):
                     matrika.append([H.order(), H.size(), h, G.order(), G.size(), g, y, i, j])
     return matrika
 
+# Ista funkcija kot prej, le da nam ta vrne samo podatke o tistih grafih, za katere nastopi enakost v naši neenakosti
+
+def naredi_matriko_enakosti(n, m):
+    matrika_enakosti = [["V(H)", "E(H)", "γ(H)", "V(G)", "E(G)", "γ(G)", "γ(G ◇ H)"]]
+    for k in range(2, n):
+        for H in graphs(k):
+            for d in range(2, m):
+                for G in graphs(d):
+                    Y = modularni_produkt(G, H)
+                    y = dominacijsko_stevilo (Y)
+                    h = dominacijsko_stevilo (H)
+                    g = dominacijsko_stevilo (G)
+                    j = preveri_enakost(y, h, g)
+                    if j == True:
+                        matrika_enakosti.append([H.order(), H.size(), h, G.order(), G.size(), g, y])
+    return matrika_enakosti
+
+# Primer tabele za grafe velikosti 5 in 5
+
 table(naredi_matriko(5, 5))
 
-︡44722c1c-e0ca-4d81-bfa5-1f1eaa54fbfc︡{"file":{"filename":"/tmp/tmphzeji7xy/tmp_p6uvda_2.svg","show":true,"text":null,"uuid":"cbb1f00d-77f0-4c9d-adac-02795e17272f"},"once":false}︡{"file":{"filename":"/tmp/tmphzeji7xy/tmp_x2nqfghd.svg","show":true,"text":null,"uuid":"b1bcc9df-84fd-47fb-9972-a964801deb77"},"once":false}︡{"file":{"filename":"/tmp/tmphzeji7xy/tmp_oupynhm0.svg","show":true,"text":null,"uuid":"50e67147-1076-496c-850d-1540a67c7601"},"once":false}︡{"stdout":"2.0 1.0 2.0\n"}︡{"stdout":"  V(H)   E(H)   γ(H)   V(G)   E(G)   γ(G)   γ(G ◇ H)   neenakost   enakost\n  2      0      2.0    2      0      2.0    2.0        True        False\n  2      0      2.0    2      1      1.0    2.0        True        True\n  2      0      2.0    3      0      3.0    2.0        True        False\n  2      0      2.0    3      1      2.0    2.0        True        False\n  2      0      2.0    3      2      1.0    2.0        True        True\n  2      0      2.0    3      3      1.0    2.0        True        True\n  2      0      2.0    4      0      4.0    2.0        True        False\n  2      0      2.0    4      1      3.0    2.0        True        False\n  2      0      2.0    4      2      2.0    2.0        True        False\n  2      0      2.0    4      3      1.0    2.0        True        True\n  2      0      2.0    4      2      2.0    2.0        True        False\n  2      0      2.0    4      3      2.0    2.0        True        False\n  2      0      2.0    4      3      2.0    2.0        True        False\n  2      0      2.0    4      4      1.0    2.0        True        True\n  2      0      2.0    4      4      2.0    2.0        True        False\n  2      0      2.0    4      5      1.0    2.0        True        True\n  2      0      2.0    4      6      1.0    2.0        True        True\n  2      1      1.0    2      0      2.0    2.0        True        True\n  2      1      1.0    2      1      1.0    1.0        True        True\n  2      1      1.0    3      0      3.0    3.0        True        True\n  2      1      1.0    3      1      2.0    2.0        True        True\n  2      1      1.0    3      2      1.0    1.0        True        True\n  2      1      1.0    3      3      1.0    1.0        True        True\n  2      1      1.0    4      0      4.0    4.0        True        True\n  2      1      1.0    4      1      3.0    3.0        True        True\n  2      1      1.0    4      2      2.0    2.0        True        True\n  2      1      1.0    4      3      1.0    1.0        True        True\n  2      1      1.0    4      2      2.0    2.0        True        True\n  2      1      1.0    4      3      2.0    2.0        True        True\n  2      1      1.0    4      3      2.0    2.0        True        True\n  2      1      1.0    4      4      1.0    1.0        True        True\n  2      1      1.0    4      4      2.0    2.0        True        True\n  2      1      1.0    4      5      1.0    1.0        True        True\n  2      1      1.0    4      6      1.0    1.0        True        True\n  3      0      3.0    2      0      2.0    2.0        True        False\n  3      0      3.0    2      1      1.0    3.0        True        True\n  3      0      3.0    3      0      3.0    3.0        True        False\n  3      0      3.0    3      1      2.0    2.0        True        False\n  3      0      3.0    3      2      1.0    3.0        True        True\n  3      0      3.0    3      3      1.0    3.0        True        True\n  3      0      3.0    4      0      4.0    3.0        True        False\n  3      0      3.0    4      1      3.0    3.0        True        False\n  3      0      3.0    4      2      2.0    2.0        True        False\n  3      0      3.0    4      3      1.0    3.0        True        True\n  3      0      3.0    4      2      2.0    2.0        True        False\n  3      0      3.0    4      3      2.0    2.0        True        False\n  3      0      3.0    4      3      2.0    2.0        True        False\n  3      0      3.0    4      4      1.0    3.0        True        True\n  3      0      3.0    4      4      2.0    3.0        True        False\n  3      0      3.0    4      5      1.0    3.0        True        True\n  3      0      3.0    4      6      1.0    3.0        True        True\n  3      1      2.0    2      0      2.0    2.0        True        False\n  3      1      2.0    2      1      1.0    2.0        True        True\n  3      1      2.0    3      0      3.0    2.0        True        False\n  3      1      2.0    3      1      2.0    2.0        True        False\n  3      1      2.0    3      2      1.0    2.0        True        True\n  3      1      2.0    3      3      1.0    2.0        True        True\n  3      1      2.0    4      0      4.0    2.0        True        False\n  3      1      2.0    4      1      3.0    2.0        True        False\n  3      1      2.0    4      2      2.0    2.0        True        False\n  3      1      2.0    4      3      1.0    2.0        True        True\n  3      1      2.0    4      2      2.0    2.0        True        False\n  3      1      2.0    4      3      2.0    2.0        True        False\n  3      1      2.0    4      3      2.0    2.0        True        False\n  3      1      2.0    4      4      1.0    2.0        True        True\n  3      1      2.0    4      4      2.0    2.0        True        False\n  3      1      2.0    4      5      1.0    2.0        True        True\n  3      1      2.0    4      6      1.0    2.0        True        True\n  3      2      1.0    2      0      2.0    2.0        True        True\n  3      2      1.0    2      1      1.0    1.0        True        True\n  3      2      1.0    3      0      3.0    3.0        True        True\n  3      2      1.0    3      1      2.0    2.0        True        True\n  3      2      1.0    3      2      1.0    1.0        True        True\n  3      2      1.0    3      3      1.0    1.0        True        True\n  3      2      1.0    4      0      4.0    4.0        True        True\n  3      2      1.0    4      1      3.0    3.0        True        True\n  3      2      1.0    4      2      2.0    2.0        True        True\n  3      2      1.0    4      3      1.0    1.0        True        True\n  3      2      1.0    4      2      2.0    2.0        True        True\n  3      2      1.0    4      3      2.0    2.0        True        True\n  3      2      1.0    4      3      2.0    2.0        True        True\n  3      2      1.0    4      4      1.0    1.0        True        True\n  3      2      1.0    4      4      2.0    2.0        True        True\n  3      2      1.0    4      5      1.0    1.0        True        True\n  3      2      1.0    4      6      1.0    1.0        True        True\n  3      3      1.0    2      0      2.0    2.0        True        True\n  3      3      1.0    2      1      1.0    1.0        True        True\n  3      3      1.0    3      0      3.0    3.0        True        True\n  3      3      1.0    3      1      2.0    2.0        True        True\n  3      3      1.0    3      2      1.0    1.0        True        True\n  3      3      1.0    3      3      1.0    1.0        True        True\n  3      3      1.0    4      0      4.0    4.0        True        True\n  3      3      1.0    4      1      3.0    3.0        True        True\n  3      3      1.0    4      2      2.0    2.0        True        True\n  3      3      1.0    4      3      1.0    1.0        True        True\n  3      3      1.0    4      2      2.0    2.0        True        True\n  3      3      1.0    4      3      2.0    2.0        True        True\n  3      3      1.0    4      3      2.0    2.0        True        True\n  3      3      1.0    4      4      1.0    1.0        True        True\n  3      3      1.0    4      4      2.0    2.0        True        True\n  3      3      1.0    4      5      1.0    1.0        True        True\n  3      3      1.0    4      6      1.0    1.0        True        True\n  4      0      4.0    2      0      2.0    2.0        True        False\n  4      0      4.0    2      1      1.0    4.0        True        True\n  4      0      4.0    3      0      3.0    3.0        True        False\n  4      0      4.0    3      1      2.0    2.0        True        False\n  4      0      4.0    3      2      1.0    4.0        True        True\n  4      0      4.0    3      3      1.0    4.0        True        True\n  4      0      4.0    4      0      4.0    3.0        True        False\n  4      0      4.0    4      1      3.0    3.0        True        False\n  4      0      4.0    4      2      2.0    2.0        True        False\n  4      0      4.0    4      3      1.0    4.0        True        True\n  4      0      4.0    4      2      2.0    2.0        True        False\n  4      0      4.0    4      3      2.0    2.0        True        False\n  4      0      4.0    4      3      2.0    2.0        True        False\n  4      0      4.0    4      4      1.0    4.0        True        True\n  4      0      4.0    4      4      2.0    4.0        True        False\n  4      0      4.0    4      5      1.0    4.0        True        True\n  4      0      4.0    4      6      1.0    4.0        True        True\n  4      1      3.0    2      0      2.0    2.0        True        False\n  4      1      3.0    2      1      1.0    3.0        True        True\n  4      1      3.0    3      0      3.0    3.0        True        False\n  4      1      3.0    3      1      2.0    2.0        True        False\n  4      1      3.0    3      2      1.0    3.0        True        True\n  4      1      3.0    3      3      1.0    3.0        True        True\n  4      1      3.0    4      0      4.0    3.0        True        False\n  4      1      3.0    4      1      3.0    3.0        True        False\n  4      1      3.0    4      2      2.0    2.0        True        False\n  4      1      3.0    4      3      1.0    3.0        True        True\n  4      1      3.0    4      2      2.0    2.0        True        False\n  4      1      3.0    4      3      2.0    2.0        True        False\n  4      1      3.0    4      3      2.0    2.0        True        False\n  4      1      3.0    4      4      1.0    3.0        True        True\n  4      1      3.0    4      4      2.0    3.0        True        False\n  4      1      3.0    4      5      1.0    3.0        True        True\n  4      1      3.0    4      6      1.0    3.0        True        True\n  4      2      2.0    2      0      2.0    2.0        True        False\n  4      2      2.0    2      1      1.0    2.0        True        True\n  4      2      2.0    3      0      3.0    2.0        True        False\n  4      2      2.0    3      1      2.0    2.0        True        False\n  4      2      2.0    3      2      1.0    2.0        True        True\n  4      2      2.0    3      3      1.0    2.0        True        True\n  4      2      2.0    4      0      4.0    2.0        True        False\n  4      2      2.0    4      1      3.0    2.0        True        False\n  4      2      2.0    4      2      2.0    2.0        True        False\n  4      2      2.0    4      3      1.0    2.0        True        True\n  4      2      2.0    4      2      2.0    2.0        True        False\n  4      2      2.0    4      3      2.0    2.0        True        False\n  4      2      2.0    4      3      2.0    2.0        True        False\n  4      2      2.0    4      4      1.0    2.0        True        True\n  4      2      2.0    4      4      2.0    2.0        True        False\n  4      2      2.0    4      5      1.0    2.0        True        True\n  4      2      2.0    4      6      1.0    2.0        True        True\n  4      3      1.0    2      0      2.0    2.0        True        True\n  4      3      1.0    2      1      1.0    1.0        True        True\n  4      3      1.0    3      0      3.0    3.0        True        True\n  4      3      1.0    3      1      2.0    2.0        True        True\n  4      3      1.0    3      2      1.0    1.0        True        True\n  4      3      1.0    3      3      1.0    1.0        True        True\n  4      3      1.0    4      0      4.0    4.0        True        True\n  4      3      1.0    4      1      3.0    3.0        True        True\n  4      3      1.0    4      2      2.0    2.0        True        True\n  4      3      1.0    4      3      1.0    1.0        True        True\n  4      3      1.0    4      2      2.0    2.0        True        True\n  4      3      1.0    4      3      2.0    2.0        True        True\n  4      3      1.0    4      3      2.0    2.0        True        True\n  4      3      1.0    4      4      1.0    1.0        True        True\n  4      3      1.0    4      4      2.0    2.0        True        True\n  4      3      1.0    4      5      1.0    1.0        True        True\n  4      3      1.0    4      6      1.0    1.0        True        True\n  4      2      2.0    2      0      2.0    2.0        True        False\n  4      2      2.0    2      1      1.0    2.0        True        True\n  4      2      2.0    3      0      3.0    2.0        True        False\n  4      2      2.0    3      1      2.0    2.0        True        False\n  4      2      2.0    3      2      1.0    2.0        True        True\n  4      2      2.0    3      3      1.0    2.0        True        True\n  4      2      2.0    4      0      4.0    2.0        True        False\n  4      2      2.0    4      1      3.0    2.0        True        False\n  4      2      2.0    4      2      2.0    2.0        True        False\n  4      2      2.0    4      3      1.0    2.0        True        True\n  4      2      2.0    4      2      2.0    2.0        True        False\n  4      2      2.0    4      3      2.0    2.0        True        False\n  4      2      2.0    4      3      2.0    2.0        True        False\n  4      2      2.0    4      4      1.0    2.0        True        True\n  4      2      2.0    4      4      2.0    2.0        True        False\n  4      2      2.0    4      5      1.0    2.0        True        True\n  4      2      2.0    4      6      1.0    2.0        True        True\n  4      3      2.0    2      0      2.0    2.0        True        False\n  4      3      2.0    2      1      1.0    2.0        True        True\n  4      3      2.0    3      0      3.0    2.0        True        False\n  4      3      2.0    3      1      2.0    2.0        True        False\n  4      3      2.0    3      2      1.0    2.0        True        True\n  4      3      2.0    3      3      1.0    2.0        True        True\n  4      3      2.0    4      0      4.0    2.0        True        False\n  4      3      2.0    4      1      3.0    2.0        True        False\n  4      3      2.0    4      2      2.0    2.0        True        False\n  4      3      2.0    4      3      1.0    2.0        True        True\n  4      3      2.0    4      2      2.0    2.0        True        False\n  4      3      2.0    4      3      2.0    2.0        True        False\n  4      3      2.0    4      3      2.0    2.0        True        False\n  4      3      2.0    4      4      1.0    2.0        True        True\n  4      3      2.0    4      4      2.0    2.0        True        False\n  4      3      2.0    4      5      1.0    2.0        True        True\n  4      3      2.0    4      6      1.0    2.0        True        True\n  4      3      2.0    2      0      2.0    2.0        True        False\n  4      3      2.0    2      1      1.0    2.0        True        True\n  4      3      2.0    3      0      3.0    2.0        True        False\n  4      3      2.0    3      1      2.0    2.0        True        False\n  4      3      2.0    3      2      1.0    2.0        True        True\n  4      3      2.0    3      3      1.0    2.0        True        True\n  4      3      2.0    4      0      4.0    2.0        True        False\n  4      3      2.0    4      1      3.0    2.0        True        False\n  4      3      2.0    4      2      2.0    2.0        True        False\n  4      3      2.0    4      3      1.0    2.0        True        True\n  4      3      2.0    4      2      2.0    2.0        True        False\n  4      3      2.0    4      3      2.0    2.0        True        False\n  4      3      2.0    4      3      2.0    2.0        True        False\n  4      3      2.0    4      4      1.0    2.0        True        True\n  4      3      2.0    4      4      2.0    2.0        True        False\n  4      3      2.0    4      5      1.0    2.0        True        True\n  4      3      2.0    4      6      1.0    2.0        True        True\n  4      4      1.0    2      0      2.0    2.0        True        True\n  4      4      1.0    2      1      1.0    1.0        True        True\n  4      4      1.0    3      0      3.0    3.0        True        True\n  4      4      1.0    3      1      2.0    2.0        True        True\n  4      4      1.0    3      2      1.0    1.0        True        True\n  4      4      1.0    3      3      1.0    1.0        True        True\n  4      4      1.0    4      0      4.0    4.0        True        True\n  4      4      1.0    4      1      3.0    3.0        True        True\n  4      4      1.0    4      2      2.0    2.0        True        True\n  4      4      1.0    4      3      1.0    1.0        True        True\n  4      4      1.0    4      2      2.0    2.0        True        True\n  4      4      1.0    4      3      2.0    2.0        True        True\n  4      4      1.0    4      3      2.0    2.0        True        True\n  4      4      1.0    4      4      1.0    1.0        True        True\n  4      4      1.0    4      4      2.0    2.0        True        True\n  4      4      1.0    4      5      1.0    1.0        True        True\n  4      4      1.0    4      6      1.0    1.0        True        True\n  4      4      2.0    2      0      2.0    2.0        True        False\n  4      4      2.0    2      1      1.0    2.0        True        True\n  4      4      2.0    3      0      3.0    3.0        True        False\n  4      4      2.0    3      1      2.0    2.0        True        False\n  4      4      2.0    3      2      1.0    2.0        True        True\n  4      4      2.0    3      3      1.0    2.0        True        True\n  4      4      2.0    4      0      4.0    4.0        True        False\n  4      4      2.0    4      1      3.0    3.0        True        False\n  4      4      2.0    4      2      2.0    2.0        True        False\n  4      4      2.0    4      3      1.0    2.0        True        True\n  4      4      2.0    4      2      2.0    2.0        True        False\n  4      4      2.0    4      3      2.0    2.0        True        False\n  4      4      2.0    4      3      2.0    2.0        True        False\n  4      4      2.0    4      4      1.0    2.0        True        True\n  4      4      2.0    4      4      2.0    3.0        True        True\n  4      4      2.0    4      5      1.0    2.0        True        True\n  4      4      2.0    4      6      1.0    2.0        True        True\n  4      5      1.0    2      0      2.0    2.0        True        True\n  4      5      1.0    2      1      1.0    1.0        True        True\n  4      5      1.0    3      0      3.0    3.0        True        True\n  4      5      1.0    3      1      2.0    2.0        True        True\n  4      5      1.0    3      2      1.0    1.0        True        True\n  4      5      1.0    3      3      1.0    1.0        True        True\n  4      5      1.0    4      0      4.0    4.0        True        True\n  4      5      1.0    4      1      3.0    3.0        True        True\n  4      5      1.0    4      2      2.0    2.0        True        True\n  4      5      1.0    4      3      1.0    1.0        True        True\n  4      5      1.0    4      2      2.0    2.0        True        True\n  4      5      1.0    4      3      2.0    2.0        True        True\n  4      5      1.0    4      3      2.0    2.0        True        True\n  4      5      1.0    4      4      1.0    1.0        True        True\n  4      5      1.0    4      4      2.0    2.0        True        True\n  4      5      1.0    4      5      1.0    1.0        True        True\n  4      5      1.0    4      6      1.0    1.0        True        True\n  4      6      1.0    2      0      2.0    2.0        True        True\n  4      6      1.0    2      1      1.0    1.0        True        True\n  4      6      1.0    3      0      3.0    3.0        True        True\n  4      6      1.0    3      1      2.0    2.0        True        True\n  4      6      1.0    3      2      1.0    1.0        True        True\n  4      6      1.0    3      3      1.0    1.0        True        True\n  4      6      1.0    4      0      4.0    4.0        True        True\n  4      6      1.0    4      1      3.0    3.0        True        True\n  4      6      1.0    4      2      2.0    2.0        True        True\n  4      6      1.0    4      3      1.0    1.0        True        True\n  4      6      1.0    4      2      2.0    2.0        True        True\n  4      6      1.0    4      3      2.0    2.0        True        True\n  4      6      1.0    4      3      2.0    2.0        True        True\n  4      6      1.0    4      4      1.0    1.0        True        True\n  4      6      1.0    4      4      2.0    2.0        True        True\n  4      6      1.0    4      5      1.0    1.0        True        True\n  4      6      1.0    4      6      1.0    1.0        True        True"}︡{"stdout":"\n"}︡{"done":true}
+# Primer tabele za grafe ko nastopi enakost velikosti 6 in 6
+
+table(naredi_matriko_enakosti(6, 6))
+
+# Iz tabele je razvidno, da je zadosten pogoj za enakost to, da ima eden izmed grafov dominacijsko število 1
+# Vendar pa ta pogoj ni nujen, saj obstajajo grafi kjer nima nobeden dominacijsko število 1, vendar enakost nastopi vseeno.
+# Naslednji trije primeri so prikaz te lastnosti
+
+G1 = Graph([(0, 1), (0, 2), (1, 3), (2, 3)])
+H1 = Graph([(0, 1), (0, 2), (1, 3), (2, 3)])
+I1 = modularni_produkt(G1, H1)
+G1.show()
+H1.show()
+I1.show()
+
+g1 = dominacijsko_stevilo(G1)
+h1 = dominacijsko_stevilo(H1)
+i1 = dominacijsko_stevilo(I1)
+j1 = preveri_enakost(i1, g1, h1)
+print(g1, h1, i1, j1)
+
+G2 = Graph([(0, 1), (0, 2), (0, 3), (3, 4)])
+H2 = Graph([(0, 1), (0, 2), (1, 3), (2, 3)])
+I2 = modularni_produkt(G2, H2)
+G2.show()
+H2.show()
+I2.show()
+
+g2 = dominacijsko_stevilo(G2)
+h2 = dominacijsko_stevilo(H2)
+i2 = dominacijsko_stevilo(I2)
+j2 = preveri_enakost(i2, g2, h2)
+print(g2, h2, i2, j2)
+
+G3 = graphs.PetersenGraph()
+H3 = Graph([(0, 1), (0, 2), (1, 3), (2, 3)])
+I3 = modularni_produkt(G3, H3)
+G3.show()
+H3.show()
+I3.show()
+
+g3 = dominacijsko_stevilo(G3)
+h3 = dominacijsko_stevilo(H3)
+i3 = dominacijsko_stevilo(I3)
+j3 = preveri_enakost(i3, g3, h3)
+print(g3, h3, i3, j3)
+
 
 
 
