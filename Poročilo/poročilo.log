@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.15)  28 NOV 2023 19:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.15)  28 NOV 2023 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/porocilo.tex
-(c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/porocilo.tex
+**c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/poročilo.tex
+(c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/poročilo.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30> (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -250,8 +250,8 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 19.
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (porocilo.aux)
-\openout1 = `porocilo.aux'.
+) (poročilo.aux)
+\openout1 = `poročilo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -337,7 +337,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 84
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2] [3]
-c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/porocilo.tex:161: Undefined control sequence.
+c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/poročilo.tex:161: Undefined control sequence.
 <argument> \g 
               
 l.161 \end{verbatim}
@@ -348,7 +348,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/porocilo.tex:161: Undefined control sequence.
+c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/poročilo.tex:161: Undefined control sequence.
 <argument> \g 
               
 l.161 \end{verbatim}
@@ -359,7 +359,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/porocilo.tex:161: Undefined control sequence.
+c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/poročilo.tex:161: Undefined control sequence.
 <argument> \g 
               
 l.161 \end{verbatim}
@@ -371,7 +371,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/porocilo.tex:161: LaTeX Error: Unicode character ◇ (U+25C7)
+c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/poročilo.tex:161: LaTeX Error: Unicode character ◇ (U+25C7)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -393,17 +393,17 @@ Overfull \hbox (227.5003pt too wide) in paragraph at lines 161--161
 []                        \T1/lmtt/m/n/12 matrika_enakosti.append([H.order(), H.size(), h, G.order(), G.size(), g, y])[] 
  []
 
-[4] (porocilo.aux) ) 
+[4] (poročilo.aux) ) 
 Here is how much of TeX's memory you used:
  7476 strings out of 476326
- 130639 string characters out of 5787722
+ 130651 string characters out of 5787722
  1863660 words of memory out of 5000000
  27784 multiletter control sequences out of 15000+600000
  570513 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,8n,77p,398b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,8n,77p,399b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on porocilo.pdf (4 pages, 192351 bytes).
+Output written on poročilo.pdf (4 pages, 192351 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

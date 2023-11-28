@@ -1,7 +1,7 @@
 PWD c:\Users\Domen\Desktop\finprak\Domination-on-modular-product-graphs\Domination-on-modular-product-graphs\Poročilo
 INPUT C:\Users\Domen\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Domen\Desktop\finprak\Domination-on-modular-product-graphs\Domination-on-modular-product-graphs\Poročilo\porocilo.tex
-OUTPUT porocilo.log
+INPUT c:\Users\Domen\Desktop\finprak\Domination-on-modular-product-graphs\Domination-on-modular-product-graphs\Poročilo\poročilo.tex
+OUTPUT poročilo.log
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -369,10 +369,10 @@ INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
-INPUT .\porocilo.aux
-INPUT porocilo.aux
-INPUT porocilo.aux
-OUTPUT porocilo.aux
+INPUT .\poročilo.aux
+INPUT poročilo.aux
+INPUT poročilo.aux
+OUTPUT poročilo.aux
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -454,7 +454,7 @@ INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
-OUTPUT porocilo.pdf
+OUTPUT poročilo.pdf
 INPUT C:\Users\Domen\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
@@ -463,7 +463,7 @@ INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
-INPUT porocilo.aux
+INPUT poročilo.aux
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\Domen\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
