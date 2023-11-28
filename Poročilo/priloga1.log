@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.15)  28 NOV 2023 21:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.15)  28 NOV 2023 21:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/porocilo.tex
-(c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/porocilo.tex
+**c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/priloga1.tex
+(c:/Users/Domen/Desktop/finprak/Domination-on-modular-product-graphs/Domination-on-modular-product-graphs/Poročilo/priloga1.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30> (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -165,114 +165,130 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count273
 \enitdp@description=\count274
 )
-   defining Unicode char U+03B3 (decimal 947)
-   defining Unicode char U+25C7 (decimal 9671)
 \c@definition=\count275
-\c@primer=\count276
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 17.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 14.
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count277
+\l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box54
-) (porocilo.aux)
-\openout1 = `porocilo.aux'.
+) (priloga1.aux)
+\openout1 = `priloga1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 18.
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 24.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 18.
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 24.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 18.
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 24.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 18.
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 24.
+(Font)              <14.4> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 24.
+(Font)              <10> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 24.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+(Font)              <7> on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+LaTeX Warning: No \author given.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 28.
+(Font)              <12> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 28.
+(Font)              <8> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 21.
 
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 47.
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 21--59
+ [] 
+ []
 
 [1
 
 {C:/Users/Domen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 82.
- (C:\Users\Domen\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 144.
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 62--100
+ [] 
+ []
 
-Overfull \hbox (91.73692pt too wide) in paragraph at lines 144--144
- []            \T1/lmtt/m/n/10.95 matrika = [["V(H)", "E(H)", "$\OML/lmm/m/it/10.95 ^^M$\T1/lmtt/m/n/10.95 (H)", "V(G)", "E(G)", "$\OML/lmm/m/it/10.95 ^^M$\T1/lmtt/m/n/10.95 (G)", "$\OML/lmm/m/it/10.95 ^^M$\T1/lmtt/m/n/10.95 (G $\U/msa/m/n/10.95 ^^F$ \T1/lmtt/m/n/10.95 H)", "neenakost", "enakost"]][] 
+[2]
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 103--141
+ [] 
  []
 
 [3]
-Overfull \hbox (5.50592pt too wide) in paragraph at lines 171--171
- []            \T1/lmtt/m/n/10.95 matrika_enakosti = [["V(H)", "E(H)", "$\OML/lmm/m/it/10.95 ^^M$\T1/lmtt/m/n/10.95 (H)", "V(G)", "E(G)", "$\OML/lmm/m/it/10.95 ^^M$\T1/lmtt/m/n/10.95 (G)", "$\OML/lmm/m/it/10.95 ^^M$\T1/lmtt/m/n/10.95 (G $\U/msa/m/n/10.95 ^^F$ \T1/lmtt/m/n/10.95 H)"]][] 
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 144--182
+ [] 
  []
 
-
-Overfull \hbox (88.59944pt too wide) in paragraph at lines 171--171
- []                                \T1/lmtt/m/n/10.95 matrika_enakosti.append([H.order(), H.size(), h, G.order(), G.size(), g, y])[] 
+[4]
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 185--223
+ [] 
  []
 
-[4] (porocilo.aux) ) 
+[5]
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 226--264
+ [] 
+ []
+
+[6]
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 267--305
+ [] 
+ []
+
+[7]
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 308--346
+ [] 
+ []
+
+[8]
+Overfull \hbox (19.90192pt too wide) in paragraph at lines 349--370
+ [] 
+ []
+
+[9] [10] (priloga1.aux) ) 
 Here is how much of TeX's memory you used:
- 3542 strings out of 476326
- 57221 string characters out of 5787722
- 1866660 words of memory out of 5000000
- 23945 multiletter control sequences out of 15000+600000
- 577835 words of font info for 83 fonts, out of 8000000 for 9000
+ 3470 strings out of 476326
+ 56162 string characters out of 5787722
+ 1900660 words of memory out of 5000000
+ 23884 multiletter control sequences out of 15000+600000
+ 546671 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,8n,62p,339b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on porocilo.pdf (4 pages, 226728 bytes).
+ 56i,7n,62p,339b,223s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Domen/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on priloga1.pdf (10 pages, 80945 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
