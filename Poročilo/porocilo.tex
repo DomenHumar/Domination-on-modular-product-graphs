@@ -70,12 +70,12 @@ spodnjo neenakost in poiskati čim več takih grafov $G$ in $H$ za katera velja 
     \end{align*}
     
     \noindent Vidimo, da velja neenakost in enakost. Za vizualno reprezentacijo tega primer,
-    odpremo in zaženemo Algoritem.sagews v Cocalc-u.
+    odpremo in zaženemo Algoritem.sagews v CoCalc-u.
 
 \end{primer}
 
 \section{Reševanje problema}
-Za reševanje opisanega problema sva uporabila programski jezik \emph{Python} in okolje Sage (SageMath).
+Za reševanje opisanega problema sva uporabila programski jezik \emph{Python} in okolje Sage (SageMath) znotraj spletne platforme CoCalc.
 Najprej sva s pomočjo zgornjih definicij definirala funkciji $dominacijsko\_stevilo(G, H)$ in $dominacijsko\_stevilo(G)$.
 Ter funciji, ki preverjata neenakost (1) oz enakost.
 
@@ -126,8 +126,8 @@ ter True če velja enakost oziroma False, če enakost ne velja.
     \begin{small}
         \begin{verbatim}
             # SIMULACIJA
-            matrika = [["V(H)", "E(H)", "γ(H)", "V(G)", "E(G)", "γ(G)", "γ(G ◇ H)", "neenakost", "enakost"]]
             def naredi_matriko(n, m):
+            matrika = [["V(H)", "E(H)", "γ(H)", "V(G)", "E(G)", "γ(G)", "γ(G ◇ H)", "neenakost", "enakost"]]
                 for k in range(2, n):
                     for H in graphs(k):
                         for d in range(2, m):
@@ -175,6 +175,8 @@ samo o grafih za katere nastopi enakost pri neenakosti (1).
 \section{Opazke}
 Z izvedbo zgornjega algoritma na grafih, ki imajo do vključno 5 vozlišč, sva dobila tabelo, ki je v Prilogi 1, iz katere je razvidno, da neenakost (1) velja za vse grafe.
 S pomočjo modificirane tabele iz Priloge 2 pa sva opazila, da je zadosten pogoj, da nastopi enakost v neenakosti (1), če ima eden izmed grafov, na katerih delamo modularni produkt,
-dominacijsko število 1. Na žalost pa tudi opazimo, da ta pogoj ni nujen, saj obstajajo kombinacije grafov za katere velja, da nobeden izmedn njiju nima dominacijskega števila enakega 1,
-a vendar vseeno nastopa enakost (vendar so takšni primeri redkejši). 3 takšne primere, si lahko ogledate, ko zaženete Algoritem.sagews znotraj Cocalc-a.
+dominacijsko število 1. \\
+
+Na žalost pa tudi opazimo, da ta pogoj ni nujen, saj obstajajo kombinacije grafov za katere velja, da nobeden izmedn njiju nima dominacijskega števila enakega 1,
+a vendar vseeno nastopa enakost (vendar so takšni primeri redkejši). 3 takšne primere si lahko ogledate, ko zaženete Algoritem.sagews znotraj CoCalc-a.
 \end{document}
